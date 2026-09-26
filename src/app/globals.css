@@ -1,26 +1,170 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0808;
+  --foreground: #fbf9f5;
+
+  /* Luxury Indian Fashion Palette */
+  --noir-black: #0a0808;
+  --noir-charcoal: #141212;
+  --noir-dark-surface: #1a1516;
+  --noir-burgundy: #330d15;
+  --noir-wine: #4a121e;
+  --noir-crimson: #721a28;
+  --noir-terracotta: #a84c35;
+  --noir-burnt-orange: #c46436;
+  --noir-gold: #c5a059;
+  --noir-gold-light: #dfbe7e;
+  --noir-gold-dark: #8c6d30;
+  --noir-ivory: #f7f4ee;
+  --noir-warm-white: #fbf9f5;
+  --noir-plum: #240a17;
+  --noir-border: rgba(197, 160, 89, 0.22);
+  --noir-border-subtle: rgba(247, 244, 238, 0.08);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-editorial), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-modern), "Plus Jakarta Sans", sans-serif;
+  
+  --color-noir-black: var(--noir-black);
+  --color-noir-charcoal: var(--noir-charcoal);
+  --color-noir-surface: var(--noir-dark-surface);
+  --color-noir-burgundy: var(--noir-burgundy);
+  --color-noir-wine: var(--noir-wine);
+  --color-noir-crimson: var(--noir-crimson);
+  --color-noir-terracotta: var(--noir-terracotta);
+  --color-noir-burnt-orange: var(--noir-burnt-orange);
+  --color-noir-gold: var(--noir-gold);
+  --color-noir-gold-light: var(--noir-gold-light);
+  --color-noir-gold-dark: var(--noir-gold-dark);
+  --color-noir-ivory: var(--noir-ivory);
+  --color-noir-warm-white: var(--noir-warm-white);
+  --color-noir-plum: var(--noir-plum);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--noir-black);
+  color: var(--noir-warm-white);
+  font-family: var(--font-modern), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--noir-black);
+  color: var(--noir-warm-white);
+  overflow-x: hidden;
+  selection-background-color: var(--noir-gold);
+  selection-color: var(--noir-black);
+}
+
+::selection {
+  background: var(--noir-gold);
+  color: var(--noir-black);
+}
+
+/* Lenis Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Subtle Film Grain */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #331f24;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Editorial Typography Helpers */
+.font-editorial {
+  font-family: var(--font-editorial), "Cormorant Garamond", Georgia, serif;
+}
+
+.font-modern {
+  font-family: var(--font-modern), "Plus Jakarta Sans", sans-serif;
+}
+
+/* Mask & Clip Transitions */
+.clip-full {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.clip-bottom-closed {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.clip-left-closed {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f7f4ee 0%, #dfbe7e 50%, #c5a059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-wine-gradient {
+  background: linear-gradient(135deg, #fbf9f5 0%, #c46436 40%, #721a28 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

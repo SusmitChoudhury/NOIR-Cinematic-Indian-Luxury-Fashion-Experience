@@ -1,0 +1,68 @@
+import { SocialPost } from "@/types";
+
+export const socialPosts: SocialPost[] = [
+  {
+    id: "soc-01",
+    handle: "@noire.couture",
+    caption: "The Kashi Vermillion draped under twilight chandeliers at our Delhi atelier. Autumn/Winter 2026.",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    likes: "14.2k",
+    aspect: "square",
+  },
+  {
+    id: "soc-02",
+    handle: "@noire.couture",
+    caption: "Precision in darkness: hand-embroidered silver bullion dabka wire on black silk velvet.",
+    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    likes: "18.9k",
+    aspect: "tall",
+  },
+  {
+    id: "soc-03",
+    handle: "@noire.couture",
+    caption: "Weightless breathability of wild tussar silk organza in terracotta hues.",
+    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+    likes: "9.8k",
+    aspect: "square",
+  },
+  {
+    id: "soc-04",
+    handle: "@noire.couture",
+    caption: "Architectural capes and sharp pleats. The contemporary Indian silhouette in motion.",
+    image: "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80",
+    likes: "22.1k",
+    aspect: "tall",
+  },
+  {
+    id: "soc-05",
+    handle: "@noire.couture",
+    caption: "Ceremonial sindoori velvet meeting pure real gold kadhwa zari. Sacred heritage reimagined.",
+    image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=800&q=80",
+    likes: "31.4k",
+    aspect: "square",
+  },
+  {
+    id: "soc-06",
+    handle: "@noire.couture",
+    caption: "Twilight reflections on molten metallic tissue. Crafted in our Varanasi weaver guilds.",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+    likes: "11.6k",
+    aspect: "tall",
+  },
+  {
+    id: "soc-07",
+    handle: "@noire.couture",
+    caption: "The quiet authority of monochrome noir couture. Designed for the woman who moves.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+    likes: "27.3k",
+    aspect: "square",
+  },
+  {
+    id: "soc-08",
+    handle: "@noire.couture",
+    caption: "Eight months on the pit loom. The mathematical miracle of double-ikat Patan Patola.",
+    image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80",
+    likes: "15.7k",
+    aspect: "tall",
+  },
+];
