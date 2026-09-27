@@ -1,123 +1,73 @@
 import { Product } from "@/types";
 
-export const products: Product[] = [
+/* ─────────────────────────────────────────────
+   COLOR VARIANT SYSTEM
+   Each product has a base entry and color variants.
+   The colorVariants array lets the UI show swatches.
+   ───────────────────────────────────────────── */
+
+export interface ColorVariant {
+  colorName: string;
+  hex: string;
+  image: string;
+}
+
+export interface ProductWithVariants extends Product {
+  colorVariants: ColorVariant[];
+  activeColorIndex?: number;
+}
+
+/* ─────────────────────────────────────────────
+   7 PRODUCT CATALOG — Each with 4-5 color options
+   All images are on-theme Indian luxury couture.
+   ───────────────────────────────────────────── */
+
+export const productsWithVariants: ProductWithVariants[] = [
+  // ═══════════════════════════════════════════
+  // PRODUCT 1: BANARASI KATAN SILK SAREE
+  // ═══════════════════════════════════════════
   {
     id: "prod-01",
-    name: "The Kashi Vermillion Banarasi Saree",
+    name: "The Kashi Banarasi Katan Silk Saree",
     category: "SAREES",
     collection: "Ritual / AW26",
     price: 185000,
     formattedPrice: "₹1,85,000",
-    color: "Deep Vermillion & Antiqued Gold",
+    color: "Royal Crimson",
     fabric: "100% Pure Mulberry Katan Silk",
     craftsmanship: "Hand-woven over 140 days using Kadhwa zari technique in Varanasi.",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80",
+    image: "/media/images/products/catalog/banarasi-red.jpg",
     availability: "Available",
-    description: "An homage to the sacred ghats of Varanasi. Woven with pure real zari beaten into micro-filaments, draped in rich vermillion katan silk.",
+    description: "An homage to the sacred ghats of Varanasi. Woven with pure real zari beaten into micro-filaments, draped in rich katan silk.",
     details: [
       "Real gold and silver electroplated zari",
       "Kadhwa hand-loom weaving technique",
       "Includes unstitched blouse piece in brocade silk",
       "Dry clean only, store wrapped in pure muslin",
     ],
+    colorVariants: [
+      { colorName: "Royal Crimson", hex: "#9E1B32", image: "/media/images/products/catalog/banarasi-red.jpg" },
+      { colorName: "Imperial Navy", hex: "#1B2A4A", image: "/media/images/products/catalog/banarasi-navy.jpg" },
+      { colorName: "Emerald Forest", hex: "#1B4D3E", image: "/media/images/products/catalog/kanjivaram-emerald.jpg" },
+      { colorName: "Champagne Gold", hex: "#D4AF37", image: "/media/images/products/catalog/chanderi-gold.jpg" },
+      { colorName: "Midnight Noir", hex: "#181818", image: "/media/images/products/catalog/velvet-noir.jpg" },
+    ],
   },
+
+  // ═══════════════════════════════════════════
+  // PRODUCT 2: KANJIVARAM TEMPLE SILK SAREE
+  // ═══════════════════════════════════════════
   {
     id: "prod-02",
-    name: "The Chandrakala Noir Zari Lehenga",
-    category: "LEHENGAS",
-    collection: "Noir Atelier / AW26",
-    price: 420000,
-    formattedPrice: "₹4,20,000",
-    color: "Midnight Noir & Dull Antique Silver",
-    fabric: "Matka Silk & Silk Velvet",
-    craftsmanship: "Over 680 master artisan hours of architectural Zardozi and micro-dabka embroidery.",
-    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80",
-    availability: "Made to Order",
-    description: "A dark sculptural triumph. Inspired by lunar phases over ancient stepwells, featuring hand-beaten silver bullion wire and structured pleats.",
-    details: [
-      "Custom tailored to client measurements",
-      "Includes hand-embroidered veil in illusion silk tulle",
-      "Sculpted corseted bodice with boning architecture",
-      "Lead time 8 to 10 weeks",
-    ],
-  },
-  {
-    id: "prod-03",
-    name: "The Oudh Crimson Chanderi Drape",
-    category: "SAREES",
-    collection: "Dawn / AW26",
-    price: 135000,
-    formattedPrice: "₹1,35,000",
-    color: "Burnt Terracotta & Rose Gold",
-    fabric: "Chanderi Silk Tissue",
-    craftsmanship: "Gossamer weaving with hand-spun wild tussar and real metallic tissue warps.",
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80",
-    availability: "Available",
-    description: "Lightweight yet profoundly majestic. The gossamer transparency of royal Chanderi tissue infused with rich terracotta undertones.",
-    details: [
-      "Ashavali peacock feather motif border",
-      "Featherweight silk-zari handloom blend",
-      "Hand-rolled French hems",
-      "Authenticity GI-tag certified",
-    ],
-  },
-  {
-    id: "prod-04",
-    name: "The Nilgiri Raw Silk Cape Ensemble",
-    category: "CONTEMPORARY",
-    collection: "Atelier / AW26",
-    price: 240000,
-    formattedPrice: "₹2,40,000",
-    color: "Deep Forest Umber & Wine",
-    fabric: "Wild Tussar Silk & Organza",
-    craftsmanship: "Contemporary asymmetric draping engineered with laser-cut handloom inserts.",
-    image: "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80",
-    availability: "Limited Edition",
-    description: "Reimagining Indian formalwear through a structured cape silhouette, sharp tailoring, and organic wild tussar silk texture.",
-    details: [
-      "Floor-length flowing wing sleeves",
-      "Hand-pleated high-waist silk cigarette trousers",
-      "Internal belt structure for effortless poise",
-      "Only 15 numbered editions crafted",
-    ],
-  },
-  {
-    id: "prod-05",
-    name: "The Awadh Muted Gold Tissue Saree",
-    category: "NEW",
-    collection: "Afterglow / AW26",
-    price: 210000,
-    formattedPrice: "₹2,10,000",
-    color: "Muted Champagne Gold & Warm Ivory",
-    fabric: "Pure Metallic Tissue & Organza",
-    craftsmanship: "Woven in Varanasi on vintage jacquard pit looms with brushed gold zari.",
-    image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
-    availability: "Available",
-    description: "Liquid metallic drape that shimmers under warm editorial candlelight. Sculpted border inspired by Nawabi court architecture.",
-    details: [
-      "Ultra-fluid metallic drape",
-      "Delicate micro-scalloped border",
-      "Includes pure habotai silk underskirt",
-      "Handcrafted in Uttar Pradesh",
-    ],
-  },
-  {
-    id: "prod-06",
     name: "The Kanjivaram Temple Border Saree",
     category: "SAREES",
-    collection: "Ritual / AW26",
+    collection: "Heritage / AW26",
     price: 265000,
     formattedPrice: "₹2,65,000",
-    color: "Deep Plum & Molten Copper",
+    color: "Deep Emerald",
     fabric: "Triple Ply Mulberry Silk",
     craftsmanship: "Interlocking Korvai weaving technique connecting body and heavy temple border.",
-    image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80",
+    image: "/media/images/products/catalog/kanjivaram-emerald.jpg",
     availability: "Available",
     description: "Woven in the temple town of Kanchipuram. Heavy three-ply silk with authentic solid gold korvai joints that never unravel.",
     details: [
@@ -126,131 +76,170 @@ export const products: Product[] = [
       "Govt Silk Mark & Handloom certified",
       "Heirloom longevity guarantee",
     ],
+    colorVariants: [
+      { colorName: "Deep Emerald", hex: "#1B4D3E", image: "/media/images/products/catalog/kanjivaram-emerald.jpg" },
+      { colorName: "Royal Crimson", hex: "#9E1B32", image: "/media/images/products/catalog/katan-crimson.jpg" },
+      { colorName: "Regal Purple", hex: "#5B2C6F", image: "/media/images/products/catalog/paithani-purple.jpg" },
+      { colorName: "Champagne Gold", hex: "#D4AF37", image: "/media/images/products/catalog/chanderi-gold.jpg" },
+    ],
   },
+
+  // ═══════════════════════════════════════════
+  // PRODUCT 3: FRENCH NET EMBROIDERED SAREE
+  // ═══════════════════════════════════════════
+  {
+    id: "prod-03",
+    name: "The Atelier French Net Embroidered Saree",
+    category: "NEW",
+    collection: "The New Edit / AW26",
+    price: 135000,
+    formattedPrice: "₹1,35,000",
+    color: "Rosé Blush",
+    fabric: "Soft French Net & Pure Silk Border",
+    craftsmanship: "Hand cutdana embroidery with micro-sequin and zari flora detail.",
+    image: "/media/images/products/catalog/net-rose.jpg",
+    availability: "Available",
+    description: "A whisper-soft French net drape in ethereal blush, intricately hand-embroidered with micro-cutdana work and tonal silk threads.",
+    details: [
+      "Hand-embroidered cutdana & zari flora",
+      "Delicate scalloped borders",
+      "Includes embroidered blouse piece (0.8m)",
+      "Dry clean only",
+    ],
+    colorVariants: [
+      { colorName: "Rosé Blush", hex: "#E0A4A8", image: "/media/images/products/catalog/net-rose.jpg" },
+      { colorName: "Crimson", hex: "#9E1B32", image: "/media/images/products/catalog/net-crimson.jpg" },
+      { colorName: "Champagne Gold", hex: "#D4AF37", image: "/media/images/products/catalog/tissue-gold.jpg" },
+      { colorName: "Emerald", hex: "#1B4D3E", image: "/media/images/products/catalog/net-emerald.jpg" },
+      { colorName: "Noir", hex: "#181818", image: "/media/images/products/catalog/velvet-noir.jpg" },
+    ],
+  },
+
+  // ═══════════════════════════════════════════
+  // PRODUCT 4: PAITHANI SILK SAREE
+  // ═══════════════════════════════════════════
+  {
+    id: "prod-04",
+    name: "The Tara Paithani Peacock Saree",
+    category: "SAREES",
+    collection: "Heritage / AW26",
+    price: 94500,
+    formattedPrice: "₹94,500",
+    color: "Regal Purple",
+    fabric: "Pure Mulbari Silk & Fine Metallic Threads",
+    craftsmanship: "Double-interlocking twill tapestry weave with gold-coated wire.",
+    image: "/media/images/products/catalog/paithani-purple.jpg",
+    availability: "Available",
+    description: "Centuries-old royal Maratha splendour with kaleidoscopic peacock motifs and a luminous solid gold tissue pallu.",
+    details: [
+      "Authentic Yeola Paithani technique",
+      "Real gold coated wire in pallu",
+      "Handwoven over 320 artisan hours",
+      "GI-tagged certification",
+    ],
+    colorVariants: [
+      { colorName: "Regal Purple", hex: "#5B2C6F", image: "/media/images/products/catalog/paithani-purple.jpg" },
+      { colorName: "Royal Crimson", hex: "#9E1B32", image: "/media/images/products/catalog/katan-crimson.jpg" },
+      { colorName: "Deep Emerald", hex: "#1B4D3E", image: "/media/images/products/catalog/kanjivaram-emerald.jpg" },
+      { colorName: "Champagne Gold", hex: "#D4AF37", image: "/media/images/products/catalog/chanderi-gold.jpg" },
+    ],
+  },
+
+  // ═══════════════════════════════════════════
+  // PRODUCT 5: CHANDERI TISSUE SAREE
+  // ═══════════════════════════════════════════
+  {
+    id: "prod-05",
+    name: "The Awadh Chanderi Tissue Saree",
+    category: "NEW",
+    collection: "Afterglow / AW26",
+    price: 78000,
+    formattedPrice: "₹78,000",
+    color: "Champagne Gold",
+    fabric: "Handspun Cotton-Silk with Metallic Filament",
+    craftsmanship: "Gossamer weaving with hand-spun wild tussar and real metallic tissue warps.",
+    image: "/media/images/products/catalog/chanderi-gold.jpg",
+    availability: "Available",
+    description: "Gossamer sheer handloom silk layered with feather-light gold zari warp. Drapes with fluid poise and timeless Indian aristocracy.",
+    details: [
+      "Ashavali peacock feather motif border",
+      "Featherweight silk-zari handloom blend",
+      "Hand-rolled French hems",
+      "GI-tag certified authentic Chanderi",
+    ],
+    colorVariants: [
+      { colorName: "Champagne Gold", hex: "#D4AF37", image: "/media/images/products/catalog/chanderi-gold.jpg" },
+      { colorName: "Rosé Blush", hex: "#E0A4A8", image: "/media/images/products/catalog/net-rose.jpg" },
+      { colorName: "Emerald", hex: "#1B4D3E", image: "/media/images/products/catalog/net-emerald.jpg" },
+      { colorName: "Crimson", hex: "#9E1B32", image: "/media/images/products/catalog/net-crimson.jpg" },
+      { colorName: "Noir", hex: "#181818", image: "/media/images/products/catalog/velvet-noir.jpg" },
+    ],
+  },
+
+  // ═══════════════════════════════════════════
+  // PRODUCT 6: VELVET ZARDOZI SAREE
+  // ═══════════════════════════════════════════
+  {
+    id: "prod-06",
+    name: "The Rohini Velvet Zardozi Saree",
+    category: "SAREES",
+    collection: "Noir Atelier / AW26",
+    price: 145000,
+    formattedPrice: "₹1,45,000",
+    color: "Midnight Noir",
+    fabric: "Silk-Blend Italian Micro Velvet",
+    craftsmanship: "Hand-framed Adda Zardozi with gilded dabka and natural seed pearls.",
+    image: "/media/images/products/catalog/velvet-zardozi.jpg",
+    availability: "Made to Order",
+    description: "An evening masterpiece from sumptuous velvet. Ornate Mughal jali motifs encrusted with beaten bullion wire and iridescent pearls.",
+    details: [
+      "Premium Italian micro velvet",
+      "Hand-embroidered Mughal arch motifs",
+      "Natural seed pearl accents",
+      "Lead time 6-8 weeks",
+    ],
+    colorVariants: [
+      { colorName: "Midnight Noir", hex: "#181818", image: "/media/images/products/catalog/velvet-zardozi.jpg" },
+      { colorName: "Royal Crimson", hex: "#9E1B32", image: "/media/images/products/catalog/katan-crimson.jpg" },
+      { colorName: "Deep Emerald", hex: "#1B4D3E", image: "/media/images/products/catalog/kanjivaram-emerald.jpg" },
+      { colorName: "Imperial Navy", hex: "#1B2A4A", image: "/media/images/products/catalog/banarasi-navy.jpg" },
+    ],
+  },
+
+  // ═══════════════════════════════════════════
+  // PRODUCT 7: RANGKAT MULTI-HUE BANARASI
+  // ═══════════════════════════════════════════
   {
     id: "prod-07",
-    name: "The Sindoori Velvet Anarkali",
-    category: "CONTEMPORARY",
-    collection: "Noir Atelier / AW26",
-    price: 310000,
-    formattedPrice: "₹3,10,000",
-    color: "Royal Sindoori Crimson",
-    fabric: "Micro Silk Velvet & Tissue Organza",
-    craftsmanship: "Calf-grazing circular flare with 48 kalis and antique copper gota patti work.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1000&q=80",
-    availability: "Made to Order",
-    description: "Rich, deep velvet reflecting regal heritage. Cut with an asymmetric hemline for the contemporary woman on the international stage.",
-    details: [
-      "48-kali structural flare",
-      "Concealed side-entry pockets",
-      "Hand-dyed naturally using madder root",
-      "Delivery within 6 weeks",
-    ],
-  },
-  {
-    id: "prod-08",
-    name: "The Meenakari Hand-Embroidered Bustier",
-    category: "CONTEMPORARY",
-    collection: "The New Edit / AW26",
-    price: 95000,
-    formattedPrice: "₹95,000",
-    color: "Charcoal & Enamelled Jewel Tones",
-    fabric: "Heavy Dupion Silk",
-    craftsmanship: "Enamelling technique translated into threadwork with semi-precious jade stones.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=1000&q=80",
-    availability: "Available",
-    description: "An architectural cropped bustier that pairs seamlessly with traditional sarees or tailored wide-leg ivory trousers.",
-    details: [
-      "Internal underwired construction",
-      "Hook-and-eye back enclosure with modesty panel",
-      "Embellished with untreated freshwater pearls",
-      "Atelier exclusive edition",
-    ],
-  },
-  {
-    id: "prod-09",
-    name: "The Shunya Asymmetric Organza Kurta",
-    category: "NEW",
-    collection: "Drift / AW26",
-    price: 115000,
-    formattedPrice: "₹1,15,000",
-    color: "Smoky Burnt Ochre",
-    fabric: "Crushed Silk Organza",
-    craftsmanship: "Hand-pleated heat-set technique combined with raw selvedge handloom trim.",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80",
-    availability: "Available",
-    description: "Minimalist geometry meets traditional handloom. A floaty, ethereal silhouette designed for movement and artistic presence.",
-    details: [
-      "Bespoke asymmetric bias cut",
-      "Semi-sheer silk texture with inner camisole",
-      "Handcrafted mother-of-pearl buttons",
-      "Ready to ship",
-    ],
-  },
-  {
-    id: "prod-10",
-    name: "The Patan Patola Heritage Drape",
+    name: "The Saanvi Rangkat Heirloom Banarasi",
     category: "SAREES",
     collection: "Ritual / AW26",
-    price: 490000,
-    formattedPrice: "₹4,90,000",
-    color: "Terracotta & Natural Indigo",
-    fabric: "Double Ikat Mulberry Silk",
-    craftsmanship: "Double-ikat technique where warp and weft are resist-dyed before weaving over 8 months.",
-    image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80",
+    price: 135000,
+    formattedPrice: "₹1,35,000",
+    color: "Multi-Hue Jewel",
+    fabric: "High-Density 4-Ply Pure Katan Silk",
+    craftsmanship: "Master class rangkat hand-block dye with continuous golden jangla vine zari.",
+    image: "/media/images/products/catalog/rangkat-multi.jpg",
     availability: "Atelier Exclusive",
-    description: "The pinnacle of Indian handloom textile art. Both sides of the fabric are completely identical in vibrant, natural dye brilliance.",
+    description: "A pinnacle masterpiece. The warp is hand-blocked in five jewel tones before weaving a continuous golden jangla vine across the full 6 yards.",
     details: [
-      "Pure double-ikat silk weave",
-      "Crafted by National Master Craftsmen in Gujarat",
-      "Museum accession quality",
-      "Single collector unit",
+      "Hand-blocked five-tone rangkat dye",
+      "Continuous golden jangla vine pattern",
+      "520+ artisan hours",
+      "Certified pure silver zari",
     ],
-  },
-  {
-    id: "prod-11",
-    name: "The Zardozi Minaudière Bag",
-    category: "ACCESSORIES",
-    collection: "The New Edit / AW26",
-    price: 68000,
-    formattedPrice: "₹68,000",
-    color: "Antique Gold & Onyx Black",
-    fabric: "Raw Silk Velvet on Solid Brass Chassis",
-    craftsmanship: "Hand-embossed metalwork inlaid with bullion gold zardozi stitching.",
-    image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80",
-    availability: "Available",
-    description: "An evening sculpture for the hand. Solid cast-brass frame draped in velvet with floral miniature motifs from Mughal manuscripts.",
-    details: [
-      "Custom detachable serpent chain in 18k gold plate",
-      "Magnetic cabochon clasp",
-      "Lined with lambskin leather",
-      "Signed atelier provenance card",
-    ],
-  },
-  {
-    id: "prod-12",
-    name: "The Polki & Pearl Choker Set",
-    category: "ACCESSORIES",
-    collection: "Ritual / AW26",
-    price: 180000,
-    formattedPrice: "₹1,80,000",
-    color: "Basra Pearl & Uncut Quartz",
-    fabric: "Silver with 24k Gold Dip",
-    craftsmanship: "Jadau setting with natural seed pearls and hand-painted enamel meenakari on reverse.",
-    image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80",
-    secondaryImage: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=1000&q=80",
-    availability: "Available",
-    description: "Traditional Jadau jewelry engineered with contemporary lightness. Sits delicately along the collarbone with fluid drape.",
-    details: [
-      "Hand-strung Basra seed pearls",
-      "Reversible meenakari peacock artwork",
-      "Adjustable woven zari dori cord",
-      "Presented in velvet keepsake box",
+    colorVariants: [
+      { colorName: "Multi-Hue Jewel", hex: "#C5A059", image: "/media/images/products/catalog/rangkat-multi.jpg" },
+      { colorName: "Royal Crimson", hex: "#9E1B32", image: "/media/images/products/catalog/banarasi-red.jpg" },
+      { colorName: "Imperial Navy", hex: "#1B2A4A", image: "/media/images/products/catalog/banarasi-navy.jpg" },
+      { colorName: "Regal Purple", hex: "#5B2C6F", image: "/media/images/products/catalog/paithani-purple.jpg" },
+      { colorName: "Deep Emerald", hex: "#1B4D3E", image: "/media/images/products/catalog/kanjivaram-emerald.jpg" },
     ],
   },
 ];
+
+/* Backward-compatible flat products array for existing sections */
+export const products: Product[] = productsWithVariants.map((p) => {
+  const { colorVariants, activeColorIndex, ...base } = p;
+  return base;
+});

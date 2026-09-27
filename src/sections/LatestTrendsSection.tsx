@@ -9,7 +9,7 @@ const TRENDS = [
     tag: "SILHOUETTE FORECAST",
     title: "THE ASYMMETRIC DHOTI DRAPE",
     description: "Replacing traditional trousers with structured, pleat-locked handloom silk dhotis tailored for high-fashion galas.",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/banarasi-red.jpg",
     season: "2026 FORECAST",
   },
   {
@@ -17,7 +17,7 @@ const TRENDS = [
     tag: "COLOR THEORY",
     title: "TERRACOTTA & MOLTEN COPPER",
     description: "Moving past conventional bridal reds toward ancient mineral pigments, madder root washes, and weathered copper foils.",
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/paithani-purple.jpg",
     season: "2026 FORECAST",
   },
   {
@@ -25,7 +25,7 @@ const TRENDS = [
     tag: "TEXTILE CRAFT",
     title: "BEATEN MATKA VELVET",
     description: "Wild tussar cocoons spun into textured velvet that absorbs directional light, creating sculptural shadows on stage.",
-    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/katan-crimson.jpg",
     season: "2026 FORECAST",
   },
 ];

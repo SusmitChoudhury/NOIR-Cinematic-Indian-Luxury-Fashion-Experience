@@ -7,7 +7,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 01/26",
     label: "Katan Silk Weave",
     category: "TEXTILE ARCHIVE",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/banarasi-red.jpg",
     accentColor: "#c5a059",
   },
   {
@@ -16,7 +16,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 02/26",
     label: "Hand-Beaten Bullion",
     category: "COUTURE SCULPTURE",
-    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/katan-crimson.jpg",
     accentColor: "#721a28",
   },
   {
@@ -25,7 +25,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 03/26",
     label: "Organic Handspun",
     category: "CONTEMPORARY DRAPE",
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/paithani-purple.jpg",
     accentColor: "#c46436",
   },
   {
@@ -34,7 +34,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 04/26",
     label: "Gossamer Warp",
     category: "HERITAGE FEATHER",
-    image: "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/kanjivaram-emerald.jpg",
     accentColor: "#dfbe7e",
   },
   {
@@ -43,7 +43,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 05/26",
     label: "48-Kali Flare",
     category: "ROYAL CEREMONIAL",
-    image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/chanderi-gold.jpg",
     accentColor: "#330d15",
   },
   {
@@ -52,7 +52,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 06/26",
     label: "Triple-Ply Temple",
     category: "SACRED GEOMETRY",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/net-rose.jpg",
     accentColor: "#a84c35",
   },
   {
@@ -61,7 +61,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 07/26",
     label: "Micro-Dabka Wire",
     category: "ATELIER INTARSIA",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/velvet-noir.jpg",
     accentColor: "#c5a059",
   },
   {
@@ -70,7 +70,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 08/26",
     label: "Resist Dye Silk",
     category: "MATHEMATICAL WEAVE",
-    image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/banarasi-navy.jpg",
     accentColor: "#721a28",
   },
   {
@@ -79,7 +79,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 09/26",
     label: "Jadau Enamel",
     category: "HEIRLOOM ADORNMENT",
-    image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/net-crimson.jpg",
     accentColor: "#dfbe7e",
   },
   {
@@ -88,7 +88,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 10/26",
     label: "Cast Velvet Frame",
     category: "EVENING OBJECT",
-    image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/velvet-zardozi.jpg",
     accentColor: "#c46436",
   },
   {
@@ -97,7 +97,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 11/26",
     label: "Modern Silhouette",
     category: "CONTEMPORARY FORM",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/banarasi-red.jpg",
     accentColor: "#c5a059",
   },
   {
@@ -106,7 +106,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 12/26",
     label: "Selvedge Detail",
     category: "NEW SILHOUETTES",
-    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/katan-crimson.jpg",
     accentColor: "#a84c35",
   },
   {
@@ -115,7 +115,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 13/26",
     label: "Tailored Silk Matka",
     category: "ANDROGYNOUS COUTURE",
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/paithani-purple.jpg",
     accentColor: "#330d15",
   },
   {
@@ -124,7 +124,7 @@ export const orbitItems: OrbitItem[] = [
     collectionNumber: "COL. 14/26",
     label: "Gleaming Real Zari",
     category: "CULTURAL HORIZON",
-    image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/chanderi-gold.jpg",
     accentColor: "#721a28",
   },
 ];

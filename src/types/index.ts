@@ -13,6 +13,7 @@ export interface Product {
   availability: 'Available' | 'Made to Order' | 'Limited Edition' | 'Atelier Exclusive';
   description: string;
   details: string[];
+  size?: string;
 }
 
 export interface CollectionItem {

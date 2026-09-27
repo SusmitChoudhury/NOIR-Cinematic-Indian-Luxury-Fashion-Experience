@@ -28,6 +28,7 @@
   --color-foreground: var(--foreground);
   --font-serif: var(--font-editorial), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-modern), "Plus Jakarta Sans", sans-serif;
+  --font-script: var(--font-script), "Alex Brush", cursive;
   
   --color-noir-black: var(--noir-black);
   --color-noir-charcoal: var(--noir-charcoal);
@@ -132,6 +133,10 @@ html.lenis body {
   font-family: var(--font-modern), "Plus Jakarta Sans", sans-serif;
 }
 
+.font-script {
+  font-family: var(--font-script), "Alex Brush", cursive;
+}
+
 /* Mask & Clip Transitions */
 .clip-full {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -155,6 +160,37 @@ html.lenis body {
   background: linear-gradient(135deg, #fbf9f5 0%, #c46436 40%, #721a28 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(12px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Reduced Motion Safety */

@@ -36,7 +36,7 @@ export const assetManifest: AssetEntry[] = [
   // Next assets to prefetch as user scrolls through Hero & Moods
   {
     id: "mood-dawn-img",
-    url: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1400&q=85",
+    url: "/media/images/products/catalog/katan-crimson.jpg",
     type: "image",
     priority: "next",
     targetDevice: "all",
@@ -44,7 +44,7 @@ export const assetManifest: AssetEntry[] = [
   },
   {
     id: "mood-drift-img",
-    url: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1400&q=85",
+    url: "/media/images/products/catalog/paithani-purple.jpg",
     type: "image",
     priority: "next",
     targetDevice: "all",

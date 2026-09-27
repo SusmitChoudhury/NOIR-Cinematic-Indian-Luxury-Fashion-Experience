@@ -1,0 +1,29 @@
+{
+  "name": "noire-luxury-backend",
+  "version": "1.0.0",
+  "description": "Production REST API backend for NOIRÉ Contemporary Luxury Indian Couture",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "noire",
+    "luxury-fashion",
+    "indian-couture",
+    "api",
+    "railway"
+  ],
+  "author": "NOIRÉ Haute Couture Atelier",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

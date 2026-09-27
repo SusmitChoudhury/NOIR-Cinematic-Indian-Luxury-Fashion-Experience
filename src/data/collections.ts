@@ -29,8 +29,8 @@ export const journeyPanels: JourneyPanel[] = [
       timeline: "45 Days of Cultivation",
       fiber: "Natural Gold Mulberry",
     },
-    image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1400&q=85",
-    secondaryImage: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/banarasi-navy.jpg",
+    secondaryImage: "/media/images/products/catalog/banarasi-red.jpg",
     composition: "asymmetric-overlap",
   },
   {
@@ -46,7 +46,7 @@ export const journeyPanels: JourneyPanel[] = [
       timeline: "140–200 Loom Days",
       fiber: "Real Beaten Zari Wire",
     },
-    image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1400&q=85",
+    image: "/media/images/products/catalog/velvet-zardozi.jpg",
     composition: "split-editorial",
   },
   {
@@ -62,8 +62,8 @@ export const journeyPanels: JourneyPanel[] = [
       timeline: "21 Days Immersion & Sun-Dry",
       fiber: "Alum-Mordanted Katan Silk",
     },
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1400&q=85",
-    secondaryImage: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/paithani-purple.jpg",
+    secondaryImage: "/media/images/products/catalog/chanderi-gold.jpg",
     composition: "monolithic-center",
   },
   {
@@ -79,7 +79,7 @@ export const journeyPanels: JourneyPanel[] = [
       timeline: "75 Prototype Cycles",
       fiber: "Silk Velvet & Structured Mesh",
     },
-    image: "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=1400&q=85",
+    image: "/media/images/products/catalog/kanjivaram-emerald.jpg",
     composition: "typography-dominant",
   },
   {
@@ -95,8 +95,8 @@ export const journeyPanels: JourneyPanel[] = [
       timeline: "Endless Presence",
       fiber: "Haute Couture Identity",
     },
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=85",
-    secondaryImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/products/catalog/velvet-noir.jpg",
+    secondaryImage: "/media/images/products/catalog/net-rose.jpg",
     composition: "portrait-statuesque",
   },
   {
@@ -112,7 +112,7 @@ export const journeyPanels: JourneyPanel[] = [
       timeline: "AW 2026 Climax",
       fiber: "Pure Liquid Metallics",
     },
-    image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1400&q=85",
+    image: "/media/images/products/catalog/net-crimson.jpg",
     composition: "wide-landscape",
   },
 ];

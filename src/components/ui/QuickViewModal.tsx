@@ -5,11 +5,12 @@ import Image from "next/image";
 import { Product } from "@/types";
 import { X, Check, Sparkles, ShieldCheck, Clock } from "lucide-react";
 import MagneticButton from "./MagneticButton";
+import { useCart } from "@/context/CartContext";
 
 interface QuickViewModalProps {
   product: Product | null;
   onClose: () => void;
-  onAddToCart: (product: Product) => void;
+  onAddToCart?: (product: Product) => void;
 }
 
 export default function QuickViewModal({
@@ -17,6 +18,7 @@ export default function QuickViewModal({
   onClose,
   onAddToCart,
 }: QuickViewModalProps) {
+  const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
 
   useEffect(() => {
@@ -36,7 +38,11 @@ export default function QuickViewModal({
   if (!product) return null;
 
   const handleAdd = () => {
-    onAddToCart(product);
+    if (onAddToCart) {
+      onAddToCart(product);
+    } else {
+      addToCart(product);
+    }
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };

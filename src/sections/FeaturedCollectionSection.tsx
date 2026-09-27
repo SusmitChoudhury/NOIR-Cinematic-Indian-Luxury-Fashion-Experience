@@ -139,7 +139,7 @@ export default function FeaturedCollectionSection() {
               className="relative w-full aspect-[4/5] sm:aspect-[3/4] overflow-hidden rounded-sm border border-[#c5a059]/25 shadow-2xl group"
             >
               <Image
-                src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1400&q=85"
+                src="/media/images/products/catalog/banarasi-red.jpg"
                 alt="NOIRÉ The New Edit - Vermillion Kadhwa Saree"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
@@ -166,7 +166,7 @@ export default function FeaturedCollectionSection() {
               className="hidden sm:block absolute -bottom-12 -right-8 md:-right-12 w-48 sm:w-64 md:w-72 aspect-[3/4] rounded-sm overflow-hidden border border-[#c5a059]/40 shadow-2xl z-20 bg-[#141212]"
             >
               <Image
-                src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80"
+                src="/media/images/products/catalog/banarasi-navy.jpg"
                 alt="Silk Texture Detail"
                 fill
                 sizes="300px"
